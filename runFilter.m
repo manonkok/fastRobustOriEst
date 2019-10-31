@@ -18,9 +18,15 @@ for iMC = 1:nMC
     accGyrMag = data.accGyrMag;
     
     % Settings for filter:
-    % Flag to estimate gyroscope bias as in Madgwick
+    % Flag to estimate gyroscope bias as in:
+    % S. Madgwick. An efficient orientation filter for inertial and 
+    % inertial/magnetic sensor arrays. Report x-io and University of 
+    % Bristol (UK), 25, 2010.
     settings.estGyrBias = 0; 
-    % Flag to estimate the local magnetic field as in
+    % Flag to estimate the local magnetic field as in:
+    % S. Madgwick. An efficient orientation filter for inertial and 
+    % inertial/magnetic sensor arrays. Report x-io and University of 
+    % Bristol (UK), 25, 2010.
     settings.estimateMagneticField = 0;
     settings.init_q_nb = [1;0;0;0]; % Initial orientation
         
